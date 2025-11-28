@@ -434,6 +434,10 @@ body{
   padding: 0;
 }
 
+.italicize_style{
+  font-style: italic;
+}
+
 .bottom_space {    /* This ensures that there is some space between the last section and the footer */
     margin-bottom: 60px;
 }
