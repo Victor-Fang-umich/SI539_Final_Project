@@ -1,17 +1,17 @@
 /* Table of contents */
 /* 
-  1. Skip Button - Line 34
-  2. Header - Line 87
-  3. Navigation Settings - Line 134
-  4. Mobile Burger Menu - Line 192
-  5. Introduction - Line 305
-  6. Second Section - Line 324
-  7. Third Section - Line 342
-  8. All Sections - Line 361
-  9. Footer Section- Line 426
-  10. Slideshow Section - Line 471
-  11. Contact Form - Line 571
-  12. Modal/Pop-up Window for Image (Laptop Version) - Line 633 or 730
+  1. Skip Button - Line 40
+  2. Header - Line 100
+  3. Navigation Settings - Line 155
+  4. Mobile Burger Menu - Line 217
+  5. Introduction - Line 326
+  6. Section 2~4 - Line 342
+  7. All Sections - Line 356
+  8. Footer Section- Line 440
+  9. Slideshow Section - Line 485
+  10. Contact Form - Line 586
+  11. Modal/Pop-up Window for Image (Laptop Version) - Line 649
+  12. Pop-up Window for Images: Resize - Line 780, 879, and 903
 */
 
 
@@ -224,7 +224,7 @@ nav a:hover {
   margin-right: 15px;
   margin-top: 15px;
 
-  position: absolute;
+  /* position: absolute; */
 
   z-index: 3; 
 
@@ -339,7 +339,7 @@ nav a:hover {
 /* End - Introduction */
 
 
-/* Section 2-4 */
+/* Section 2~4 */
 .section_two img, .section_three img, .section_four img{
     border-radius: 10px;
 }
@@ -777,7 +777,7 @@ body{
   font-size: 16px;
 }
 
-/* Pop-up Window for Images - Resize */
+/* Pop-up Window for Images: Resize */
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 640px;
@@ -876,7 +876,7 @@ body{
   border-top: 1.5px solid darkgray;
 }
 
-/* Pop-up Window for Images - Resize */
+/* Pop-up Window for Images: Resize */
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 1024px;
@@ -900,7 +900,7 @@ body{
   grid-gap: 30px;
 }
 
-/* Pop-up Window for Images - Resize */
+/* Pop-up Window for Images: Resize */
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 1280px;
