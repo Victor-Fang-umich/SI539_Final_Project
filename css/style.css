@@ -1,0 +1,917 @@
+/* Table of contents */
+/* 
+  1. Skip Button - Line 34
+  2. Header - Line 87
+  3. Navigation Settings - Line 134
+  4. Mobile Burger Menu - Line 192
+  5. Introduction - Line 305
+  6. Second Section - Line 324
+  7. Third Section - Line 342
+  8. All Sections - Line 361
+  9. Footer Section- Line 426
+  10. Slideshow Section - Line 471
+  11. Contact Form - Line 571
+  12. Modal/Pop-up Window for Image (Laptop Version) - Line 633 or 730
+*/
+
+
+
+/* From Start Code */
+html{
+  scroll-behavior: smooth;
+}
+
+/* From Start Code */
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    -webkit-transition: none; /* sets to default setting */
+    transition: none;        /* sets to default setting */
+   }
+
+  header{
+    background-attachment: initial; /*Turn off parallax*/
+  }
+}
+
+/* Skip Button */
+.skip a{
+  font-weight: bold;
+  position: absolute;
+  top: -65px;
+  z-index: 3;
+
+  /* From Starter Code */
+  text-decoration: none;
+  background: #fff9dd;
+  left: 25px;
+  padding: 10px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+}
+
+.skip a:visited{
+  color: #4d2912;
+}
+
+.skip a:focus {
+  position: absolute;
+  top: 25px;
+}
+/* End - Skip Button */
+
+*:focus {
+  box-sizing: border-box;
+  border: 5px dashed #4d2912;
+} 
+
+
+main a{  
+  font-weight: bold;
+}
+
+.link_style{  
+  color: #4d2912; 
+  text-decoration: none;
+  font-style: italic;
+}
+
+.link_style:visited{
+  color: #4d2912; 
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 60px;
+  align-items: center;
+  justify-items: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.header, .intro, .nav_container, .section_two, .section_three, .section_four {
+     grid-column: 1 / -1;
+}
+
+/* Header */
+.header {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  justify-items: center;
+  background-color: #4d2912;
+}
+
+.header .header_img, .header_title, .nav_container, .backup_title, .mobile_nav{
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.header_title{
+  width: 80%;
+  height: auto;
+
+  margin-top: 50px;
+
+  z-index: 2; 
+}
+
+.opacity_zero{  /* This ensures the header image in index.html covers all columns. */
+  opacity: 0%;
+}
+
+.home_title_size{    /* This ensures the header title in index.html will not be too big. */
+  max-width: 1365px;
+}
+
+.title_size{
+  width: 100%;
+}
+
+.header_img{
+  z-index: 1; 
+  filter: brightness(50%);
+}  
+
+/* The next 2 sections help enlarge the header image
+    while keeping the max height 750px.
+  This ensures that the header image will not cover 
+    the whole screen. */
+.header_img{
+  max-height: 900px;
+  width: 100%;
+}
+
+.header img{
+  max-height: 900px;
+  background-size: contain;
+}
+/* End - Header */
+
+/* Navigation Settings */
+nav li{
+  display: inline-block;
+  padding-right: 20px;
+  line-height: 2.1;
+}
+
+nav .last_option{
+  padding-right: 0px;
+}
+
+nav a{
+  color: white;
+  font-weight: medium;
+  text-decoration: none; 
+}
+
+nav a.active{
+  color: white;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #ffce4d;
+  font-weight: bold;
+}
+
+nav{
+  padding-top: 30px; 
+  padding-bottom: 25px; 
+  padding-left: 25px; 
+  text-align: center;
+}
+
+nav a:focus {
+  color: #ffce4d;
+  border: 3px dashed #ff9194;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #ffce4d;
+}
+
+.nav_container{
+  display: none;
+}
+
+.nav_container{
+  align-self: start;
+  justify-self: center;
+
+  background: rgba(18, 18, 18, 0.4);
+  border-radius: 50px;
+
+  margin-top: 20px;
+  /* margin-right: 20px; */
+
+  padding: 15px 50px;
+
+  z-index: 2; 
+}
+/* End - Navigation Settings */
+
+
+/* Mobile Burger Menu */
+.mobile_nav{
+  width: 75px;
+  height: auto;
+  align-self: start;
+  justify-self: end;
+
+  margin-right: 15px;
+  margin-top: 15px;
+
+  position: absolute;
+
+  z-index: 3; 
+
+  display: grid;
+  overflow: hidden;
+  background-color: rgba(18, 18, 18, 0.5);
+  border-radius: 15px;
+
+  justify-content: center;
+}
+
+.menu_icon_unclicked{
+  width: 25px;
+  margin-top: 5px;
+}
+
+#unclick_menu{
+  margin: 2px;
+  padding: 14px 20px;
+  border-radius: 15px;
+}
+
+.menu_icon_unclicked:focus{
+  border-width: 0px;
+}
+
+.menu_icon_unclicked:hover{
+  filter: brightness(0) saturate(100%) invert(82%) sepia(65%) saturate(524%) hue-rotate(333deg) brightness(101%) contrast(101%);
+}
+
+.menu_icon_clicked{
+  width: 25px;
+  height: auto;
+
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+#horizontal_line {     /* Line between the close icon and the snavigation options */
+  width: 180px; /* a specific width */
+  height: 2px; /* Thickness of the line */
+  background-color: rgb(92, 92, 92); /* Color of the line */
+  margin: auto; /* Adjust spacing */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.menu_icon_clicked:hover{
+  filter: brightness(0) saturate(100%) invert(82%) sepia(65%) saturate(524%) hue-rotate(333deg) brightness(101%) contrast(101%);
+}
+
+#mobile_nav_links .active{
+  font: pink;
+  padding: 5px 0px;
+  margin: 10px;
+  border-bottom: 2px solid #ffce4d;
+}
+
+.mobile_nav:focus{
+  border: 5px solid pink;
+}
+
+.mobile_nav #mobile_nav_links {
+  display: none;
+}
+
+.mobile_nav #click_menu {
+  padding-bottom: 0px;
+  display: none;
+}
+
+.mobile_nav a {
+  color: white;
+  padding: 14px 5px;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+}
+
+.mobile_nav a:focus{
+  color: #FFCB05;
+  border: 3px dashed #ff9194;
+}
+
+.mobile_nav ul {
+  list-style-type: none;
+}
+
+.mobile_nav li {
+  text-align: center;
+}
+
+.current{     /* This is used to show the current page in the buger menu */
+  color: #FFCB05;
+}
+/* End - Mobile Burger Menu */
+
+
+/* Introduction */
+.intro{
+  max-width: 1365px; /* make all the sections the same size */
+
+  padding: 20px 0px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.intro img{
+    border-radius: 10px;
+}
+/* End - Introduction */
+
+
+/* Section 2-4 */
+.section_two img, .section_three img, .section_four img{
+    border-radius: 10px;
+}
+
+.section_two, .section_three, .section_four {
+  max-width: 1365px;  /* make all the sections the same size */
+  padding: 20px 0px;
+
+  margin-left: 15px;
+  margin-right: 15px;
+}
+/* End - Section 2-4 */
+
+
+/* All Sections */
+.container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container iframe {
+  border-radius: 10px;
+  /* object-fit: cover; */
+  width: 100%;
+  height: 100%;
+  height: 330px;
+}
+
+.container iframe:hover {
+  transition: 0.3s;
+  box-sizing: border-box;
+  border: 5px solid #4d2912;
+}
+
+.img_border > a:hover{    /* This is used for resources page (Pinterest, ect) */
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 5px solid #4d2912;
+}
+
+.img_border > a:focus{    /* This is used for resources page (Pinterest, ect) */
+  border-radius: 15px;
+  border: 5px dashed #4d2912;
+}
+
+.img_border{     /* This is used for resources page (Pinterest, ect) */
+  display: grid;  
+}
+
+h1 {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  margin-bottom: 10px;
+  line-height: 1.2;
+
+  font-size: 36px;
+  text-align: center;
+
+  color: white;
+}
+
+h2 {
+  padding-right: 10px;
+  padding-left: 10px;
+  
+  margin-bottom: 15px;
+  line-height: 1.2;
+
+  color: #4d2912;
+  font-size: 28px;
+  text-align: center;
+}
+
+p {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+body{
+  background-color: #fff9dd;
+  font-family: 'Fira Code', monospace, sans-serif;
+  font-size: 16px;
+  line-height: 1.15;
+  margin: 0px;
+  padding: 0;
+}
+
+.bottom_space {    /* This ensures that there is some space between the last section and the footer */
+    margin-bottom: 60px;
+}
+/* End - All Sections */
+
+
+/* Footer Section */
+footer{
+  background-color: #fff9dd;
+  /* color: black; */
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+footer p{
+  grid-column: 1 / -1;
+  padding-bottom: 20px;
+}
+
+footer .address{
+  text-align: left;
+    line-height: 150%;
+}
+
+footer .first_line{
+  font-weight: bold;
+  line-height: 150%;
+
+}
+
+footer .copyright{
+  color: #454545;
+  border-top: 1px solid darkgray;
+  padding-top: 50px;
+
+  width: 95%;
+}
+/* END - Footer Section */
+
+
+/* Slideshow Section */
+.slideshow_container {
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {       /* Next & previous buttons */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {      /* Position the "next button" to the right */
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {  /* On hover, add a black background color with a little bit see-through */
+  color: #ffce4d;
+  border: 3px solid #ffce4d;
+  background-color: rgba(0, 0, 0, 1);
+}
+
+.prev:focus, .next:focus {
+  color: #ffce4d;
+  border: 5px dashed #ff9194;
+  background-color: rgba(0,0,0, 1);
+}
+
+.text {    /* Caption text -> NOT USED */
+  /* color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center; */
+}
+
+.numbertext {      /* Number text (1/3 etc) -> NOT USED */
+  /* color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0; */
+}
+
+.dot, .dot_2 {     /* The dots/bullets/indicators */
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dots, .dots_2{
+  text-align: center;
+}
+
+.dot:hover, .dot_2:hover{
+  box-sizing: border-box;
+  background-color: #ffce4d;
+  border: 3px solid #4d2912;
+}
+
+.dot:focus, .dot_2:focus {
+  box-sizing: content-box;
+  background-color: #4d2912;
+  border: 4px dashed #ff9194;
+} 
+
+.dot_active, .dot_2_active{
+  background-color: #4d2912;
+  border: 0px solid #4d2912;
+}
+
+.fade {     /* Fading animation - Part 1 */
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {    /* Fading animation - Part 2 */
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/* End - Slideshow */
+
+
+/* Contact Form */
+.form_container {
+  font-size: 18px;   /* The body font size */
+
+  width: auto;
+
+  border-radius: 10px;
+  background-color: #e3ba9b;
+
+  padding: 20px;
+}
+
+input[type=text], input[type=email], textarea {
+  font-size: 18px;
+
+  width: 100%;
+  padding: 12px;
+  background-color: #fde8d7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+input[type=text]:focus, input[type=email]:focus, textarea:focus{
+  border: 5px dashed #4d2912;
+}
+
+input[type=submit] {
+  font-size: 18px; 
+
+  background-color: #3C6506;
+  color: white;
+
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+
+  /* Center the button */
+  display: block;
+  margin: 0 auto; 
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  color: #FFCB05;
+}
+
+input[type=submit]:focus{
+  border: 5px dashed #FFCB05;
+  color: #FFCB05;
+}
+
+.text-center{
+  text-align: center;
+}
+/* End - Contact Form */
+
+
+
+/* Modal/Pop-up Window for Image */
+.myImages{
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.myImages:hover{
+  /* opacity: 0.7; */
+  box-sizing: border-box;
+  border: 5px solid #4d2912;
+}
+
+.modal{         /* The Modal (background) */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.95); /* Black w/ opacity */
+}
+
+.modal-content{      /* Modal Content (Image) - Part 1 */
+  margin: auto;     /* Center the image */
+  display: block;
+
+  /* Image Size: 1280 X 720 */
+  max-width: 320px;
+  max-height: 180px;
+}
+
+.modal img{         /* Modal Content (Image) - Part 2 */
+  width: 320px;     /* 1280 x 0.25 */
+  height: 180px;    /* 720 x 0.25 */
+
+  object-fit: fill;
+}
+
+#caption{       /* Caption of Modal Image */
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: white;
+  padding: 20px 0;
+  height: 150px;
+  font-size: x-large;
+}
+
+.modal-content, #caption{  /* Add Animation - Part 1 */
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {  /* Add Animation - Part 2 */
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {          /* Add Animation - Part 3 */
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+.close{      /* The Close Button */
+  /* position: static; */
+  text-align: center;
+  margin: auto;
+  width: 80px;
+
+  color: white;
+  font-size: 60px;
+  /* font-weight: bold; */
+  transition: 0.3s;
+}
+
+.close_position{
+  display: grid;
+  /* max-width: 320px; */
+}
+
+.close:hover, .close:focus{
+  color: #FFCB05;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close:focus{
+  border: 5px dashed #ff9194;
+}
+/* End - Modal/Pop-up Window for Image */
+
+
+
+
+
+
+
+/* Responsive: change font size */
+@media all and (min-width: 500px) {
+
+.title_size{
+  width: 85%;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  line-height: 1.5;
+}
+
+body{
+  font-size: 16px;
+}
+
+/* Pop-up Window for Images - Resize */
+.modal-content{      /* Modal Content (Image) - Part 1 */
+  /* Image Size: 1280 X 720 */
+  max-width: 640px;
+  max-height: 360px;
+}
+
+.modal img{          /* Modal Content (Image) - Part 2 */
+  width: 640px;    /* 1280 X 0.5 */
+  height: 360px;   /* 560 X 0.5 */
+
+  object-fit: fill;
+}
+
+
+}
+
+
+
+/* Larger Version */
+@media all and (min-width: 1024px) {
+
+.mobile_nav{
+  display: none;
+}
+
+.nav_container{
+  display: inline;
+}
+
+.container {
+  grid-gap: 120px;
+}
+
+.intro, .section_two, .section_three, .section_four{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.slide_text_left{
+  grid-column: 1 / span 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.slide_text_right{
+  grid-column: 3 / span 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+}
+
+.text_left{
+  grid-column: 1 / span 2;
+  align-self: center;
+}
+
+.text_right{
+  grid-column: 3 / span 2;
+  align-self: center;
+}
+
+.intro .relevant_img{
+  grid-column: 3 / span 2;
+}
+
+.slideshow_right{
+  grid-column: 3 / span 2;
+  grid-row: 1;
+}
+
+.slideshow_left{
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.dots{
+  grid-column: 1 / span 2;
+  grid-row: 2;
+}
+
+.dots_2{
+  grid-column: 3 / span 2;
+  grid-row: 2;
+}
+
+.whole_column, .intro .whole_column{
+  grid-column: 1 / -1;
+}
+
+.form_container{
+  grid-column: 1 / -1;
+}
+
+.section_line{
+  padding-top: 120px;
+  border-top: 1.5px solid darkgray;
+}
+
+/* Pop-up Window for Images - Resize */
+.modal-content{      /* Modal Content (Image) - Part 1 */
+  /* Image Size: 1280 X 720 */
+  max-width: 1024px;
+  max-height: 560px;
+}
+
+.modal img{          /* Modal Content (Image) - Part 2 */
+  width: 1024px;
+  height: 560px;
+
+  object-fit: fill;
+}
+
+
+}
+
+
+@media all and (min-width: 1500px) {
+
+.intro, .section_two, .section_three, .section_four{
+  grid-gap: 30px;
+}
+
+/* Pop-up Window for Images - Resize */
+.modal-content{      /* Modal Content (Image) - Part 1 */
+  /* Image Size: 1280 X 720 */
+  max-width: 1280px;
+  max-height: 720px;
+}
+
+.modal img{          /* Modal Content (Image) - Part 2 */
+  width: 1280px;
+  height: 720px;
+
+  object-fit: fill;
+}
+
+}

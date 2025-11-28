@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>News</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
+    <header>
+        <!-- <div id="about_page_current"></div> -->
+        <!-- <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html" class = "active">Home</a></li>
+                <li><a href = "networking.html">Networking</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li class><a href = "career.html">Career</a></li>
+                <li class = "last_option"><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav> -->
+
+    </header>
+
+    <!-- <main class="container" id = "main_content">  -->   <!-- main content starts at the header image: Line 72 -->
+    <main class="container">
+
+      <!-- Part 1: Header -->
+       <div class = "header">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class = "mobile_nav" id = "padding_space">
+          <a href="javascript:void(0);" id="unclick_menu" onclick = "burgerMenu()">
+            <div class = "menu_icon_unclicked">
+              <img id="menu_icon" src="images/Menu_Icon.png" alt="A buger menu icon">
+            </div>
+          </a>
+
+          <a href="javascript:void(0);" id="click_menu" onclick="burgerMenu()">
+            <div class = "menu_icon_clicked">
+              <img id="close_icon" src="images/Close_Icon.png" alt="A close icon">
+            </div>
+          </a>
+          <div id="mobile_nav_links">
+            <div id="horizontal_line"></div>
+            <ul>
+                 <li><a href = "index.html">Home</a></li>
+                 <li><a href = "resources.html">Resources</a></li>
+                 <li><a href = "news.html"><span class="current">-</span> News <span class="current">-</span></a></li>
+                 <li class = "last_option"><a href = "about.html">About</a></li>
+             </ul>
+           </div>
+
+        </div>
+
+
+        <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resources.html">Resources</a></li>
+                <li><a href = "news.html" class="active">News</a></li>
+                <li class = "last_option"><a href = "about.html">About</a></li>
+            </ul>
+            <div class = "nav_background">
+
+            </div>
+        </nav>
+
+       
+         <div class = "header_img" id = "main_content">   
+            <img width="560" height="315" src="images/News_Header.JPG" alt="Isabelle is having an announcement">
+         </div>
+
+         <div class = "backup_title">
+           <h1>News</h1>
+         </div>
+
+         <div class = "header_title title_size">
+            <img src="images/News_Title.png" alt="News Title">
+         </div>
+
+       </div>
+
+
+      <!-- Part 2: Introduction -->
+      <div class = "intro">
+       <div class = "text_left">
+         <h2>New Update in 2026!</h2>
+         <p>
+            A new update for Animal Crossing: New Horizons will be released on January 15, 2026. 
+            The free Version 3.0 update will add exciting new content for all players. 
+         </p>
+         <p>
+            In addition, a special edition for the Nintendo Switch 2 will launch, 
+            featuring upgraded graphics and improved controls.
+         </p>
+         <p>
+            <a class="link_style" href="https://www.youtube.com/watch?v=7nODHyw3lgs&t=7s">
+              Click to watch the official trailer on YouTube</a>
+         </p>
+       </div>
+
+       <div class = "relevant_img">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/7nODHyw3lgs?si=LWzWpOO129d972_f" title="YouTube video player" 
+          frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       </div>
+
+      </div>
+
+
+      <!-- Part 3: New Villagers -->
+      <div class = "section_two">
+       <div class = "text_right">
+         <h2>New Villagers</h2>
+         <p>
+            The upcoming Version 3.0 update for Animal Crossing: New Horizons will introduce four new villagers to the game. 
+         </p>
+         <p>
+            Mineru and Tulin are inspired by The Legend of Zelda, while Cece and Viché are collaborations with Splatoon.
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_left">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/New_Villagers.png" alt="Cece and Viché">
+       </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div tabindex="0" class="close" role="button" aria-label="Close">&times;</div>
+          <img class="modal-content" id="img_1" src="images/New_Villagers.png" alt="Cece and Viché">
+        <div id="caption"></div>
+        </div>
+       
+    
+      </div>
+
+      <!-- Part 4: New Items -->
+      <div class = "section_three last_section">
+       <div class = "text_left">
+         <h2>New Items</h2>
+         <p>
+            The upcoming Version 3.0 update will also bring a variety of new items and clothing, 
+            which gives players more ways to decorate their islands and dress their characters.
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_right">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/New_Items.png" alt="LEGO Items">
+       </div>
+    
+       <div class = "bottom_space"></div>
+      </div>
+
+
+
+    </main>
+    
+    <footer class = "footer_container">
+        <!-- <p class = "first_line">University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p class = "address"> 
+            School of Information 
+            <br>
+            University of Michigan
+            <br>
+            2200 Hayward Street
+            <br>
+            Ann Arbor, MI 48109
+            <br>
+        </p> -->
+        <p class = "copyright">© Copyrights <span id="year"></span> by Victor Fang. All rights reserved.</p>
+    </footer>
+
+    <script src = "js/index.js"></script>
+
+</body>
+</html>

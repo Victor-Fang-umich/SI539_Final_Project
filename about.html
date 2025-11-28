@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>About</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
+    <header>
+        <!-- <div id="about_page_current"></div> -->
+        <!-- <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html" class = "active">Home</a></li>
+                <li><a href = "networking.html">Networking</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li class><a href = "career.html">Career</a></li>
+                <li class = "last_option"><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav> -->
+
+    </header>
+
+    <!-- <main class="container" id = "main_content">  -->   <!-- main content starts at the header image: Line 72 -->
+    <main class="container">
+
+      <!-- Part 1: Header -->
+       <div class = "header">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class = "mobile_nav" id = "padding_space">
+          <a href="javascript:void(0);" id="unclick_menu" onclick = "burgerMenu()">
+            <div class = "menu_icon_unclicked">
+              <img id="menu_icon" src="images/Menu_Icon.png" alt="A buger menu icon">
+            </div>
+          </a>
+
+          <a href="javascript:void(0);" id="click_menu" onclick="burgerMenu()">
+            <div class = "menu_icon_clicked">
+              <img id="close_icon" src="images/Close_Icon.png" alt="A close icon">
+            </div>
+          </a>
+          <div id="mobile_nav_links">
+            <div id="horizontal_line"></div>
+            <ul>
+                 <li><a href = "index.html">Home</a></li>
+                 <li><a href = "resources.html">Resources</a></li>
+                 <li><a href = "news.html">News</a></li>
+                 <li class = "last_option"><a href = "about.html"><span class="current">-</span> About <span class="current">-</span></a></li>
+             </ul>
+           </div>
+
+        </div>
+
+
+        <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resources.html">Resources</a></li>
+                <li><a href = "news.html">News</a></li>
+                <li class = "last_option"><a href = "about.html" class="active">About</a></li>
+            </ul>
+            <div class = "nav_background">
+
+            </div>
+        </nav>
+
+       
+         <div class = "header_img" id = "main_content">   
+            <img width="560" height="315" src="images/Night_Sky.JPG" alt="Playing piano on a beach">
+         </div>
+
+         <div class = "backup_title">
+           <h1>About</h1>
+         </div>
+
+         <div class = "header_title title_size">
+            <img src="images/About_Title.png" alt="About Title">
+         </div>
+
+       </div>
+
+
+      <!-- Part 2: Introduction -->
+      <div class = "intro">
+       <div class = "text_left">
+         <h2>About Me</h2>
+         <p>
+            My name is Victor, and I am currently a graduate student at the University of Michigan, majoring in Information. 
+            I aspire to become a UI/UX designer who creates user-friendly interfaces for all kinds of software, especially video games.
+         </p>
+       </div>
+
+       <div class = "relevant_img">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Field_Trip.JPG" alt="A field trip on Atlantis">
+       </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div tabindex="0" class="close" role="button" aria-label="Close">&times;</div>
+          <img class="modal-content" id="img_1" src="images/Field_Trip.JPG" alt="A field trip on Atlantis">
+          <div id="caption"></div>
+        </div>
+
+      </div>
+
+
+      <!-- Part 3: Contact Form -->
+      <div class = "section_two last_section section_line">
+        <div class="whole_column">
+            <h2>Contact Form</h2>
+            <p class = "text-center">
+                Would you like to connect? Feel free to fill out the form below!
+            </p>
+        </div>
+
+        <div class = "form_container">
+            <form
+            action="https://formspree.io/f/xqagrlrv"
+            method="POST"
+            >
+            <label for="first_name">First Name <span class="req">*</span></label>
+            <input type="text" id="first_name" name="first_name" placeholder="Enter your first name..." required>
+
+            <label for="last_name">Last Name <span class="req">*</span></label>
+            <input type="text" id="last_name" name="last_name" placeholder="Enter your last name..." required>
+
+            <label for="email">Email Address <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address..." required>
+            
+            <label for="subject">Message <span class="req">*</span></label>
+            <textarea id="subject" name="subject" placeholder="Write a message..." style="height:200px" required></textarea>
+
+            <input type="submit" value="Submit">
+            </form>
+
+        </div>
+
+    
+       <div class = "bottom_space"></div>
+      </div>
+
+
+    </main>
+    
+    <footer class = "footer_container">
+        <!-- <p class = "first_line">University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p class = "address"> 
+            School of Information 
+            <br>
+            University of Michigan
+            <br>
+            2200 Hayward Street
+            <br>
+            Ann Arbor, MI 48109
+            <br>
+        </p> -->
+        <p class = "copyright">© Copyrights <span id="year"></span> by Victor Fang. All rights reserved.</p>
+    </footer>
+
+    <script src = "js/index.js"></script>
+
+</body>
+</html>

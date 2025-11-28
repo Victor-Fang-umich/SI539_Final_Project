@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Animal Crossing Diary</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
+    <header>
+        <div id="home_page_current"></div> 
+        <!-- <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html" class = "active">Home</a></li>
+                <li><a href = "networking.html">Networking</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li class><a href = "career.html">Career</a></li>
+                <li class = "last_option"><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav> -->
+
+    </header>
+
+    <!-- <main class="container" id = "main_content">  -->   <!-- main content starts at the header image: Line 72 -->
+    <main class="container"> 
+
+      <!-- Part 1: Header -->
+       <div class = "header">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class = "mobile_nav" id = "padding_space">
+          <a href="javascript:void(0);" id="unclick_menu" onclick = "burgerMenu()">
+            <div class = "menu_icon_unclicked">
+              <img id="menu_icon" src="images/Menu_Icon.png" alt="A buger menu icon">
+            </div>
+          </a>
+
+          <a href="javascript:void(0);" id="click_menu" onclick="burgerMenu()">
+            <div class = "menu_icon_clicked">
+              <img id="close_icon" src="images/Close_Icon.png" alt="A close icon">
+            </div>
+          </a>
+          <div id="mobile_nav_links">
+            <div id="horizontal_line"></div>
+            <ul>
+                 <li><a href = "index.html"><span class="current">-</span> Home <span class="current">-</span></a></li>
+                 <li><a href = "resources.html">Resources</a></li>
+                 <li><a href = "news.html">News</a></li>
+                 <li class = "last_option"><a href = "about.html">About</a></li>
+             </ul>
+           </div>
+
+        </div>
+
+
+        <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html" class = "active">Home</a></li>
+                <li><a href = "resources.html">Resources</a></li>
+                <li><a href = "news.html">News</a></li>
+                <li class = "last_option"><a href = "about.html">About</a></li>
+            </ul>
+            <div class = "nav_background">
+
+            </div>
+        </nav>
+       
+         <div class = "header_img" id = "main_content">   
+            <img width="560" height="315" src="images/Beach.jpg" alt="A beach">
+         </div>
+
+         <div class = "backup_title">
+           <h1>Animal Crossing Diary</h1>
+         </div>
+
+         <!-- This makes the image cover all columns -->
+         <div class = "header_title opacity_zero">
+            <img src="images/Title.png" alt="Animal Crossing Diary Title">
+         </div>
+
+         <div class = "header_title home_title_size">
+            <img src="images/Title.png" alt="Animal Crossing Diary Title">
+         </div>
+
+       </div>
+
+      <!-- Part 2: Introduction -->
+      <div class = "intro">
+       <div class = "text_left">
+         <h2>Welcome!</h2>
+         <p>
+            Welcome to my Animal Crossing: New Horizons island — Atlantis! 
+         </p>
+         <p>
+            This site offers a little tour of my favorite designs, 
+            along with sources and news that will hopefully inspire ideas for your own island adventures.
+         </p>
+       </div>
+
+       <div class = "relevant_img">
+        <!-- <img id="myImg" tabindex="0" width="560" height="315" src="images/Flower.JPG" alt="A flower shop."> -->
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Welcome.JPG" alt="My house on Atlantis"> 
+       </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div class="close_position">
+            <div tabindex="0" class="close" role="button" aria-label="Close">&times;</div>
+          </div>
+          <img class="modal-content" id="img_1" src="images/Welcome.JPG" alt="My house on Atlantis">
+          <div id="caption"></div>
+        </div>
+
+      </div>
+
+
+    <!-- Part 2: Villagers -->
+      <div class = "section_two">
+       <div class = "slide_text_right">
+         <h2>Meet My Villagers</h2>
+         <p>
+          Lily, Ankha, Zucker, and Apollo are the treasured and beloved residents of Atlantis.
+         </p>
+         <p>
+          Each one brings their own spark of magic that gives the island a lively energy and adds a quirky charm to everyday life.
+         </p>
+       </div>
+
+       <div class="slideshow_container slideshow_left">
+
+        <div class="my_slides fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Lily.JPG" alt="Lily and her house">
+        </div>
+
+        <div class="my_slides fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Ankha.JPG" alt="Ankha and her house">
+        </div>
+
+        <div class="my_slides fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Zucker.JPG" alt="Zucker and his house">
+        </div>
+
+        <div class="my_slides fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Apollo.JPG" alt="Apollo and his house">
+        </div>
+
+        <a tabindex="0" class="prev" onclick="plus_slides(-1)" onkeydown="if (event.key === 'Enter') plus_slides(-1)">❮</a>
+        <a tabindex="0" class="next" onclick="plus_slides(1)" onkeydown="if (event.key === 'Enter') plus_slides(1)">❯</a>
+
+        </div>
+
+        <br>
+
+        <div class = "dots">
+          <span tabindex="0" class="dot" onclick="current_slide(1)" onkeydown="if (event.key === 'Enter') current_slide(1)"></span> 
+          <span tabindex="0" class="dot" onclick="current_slide(2)" onkeydown="if (event.key === 'Enter') current_slide(2)"></span> 
+          <span tabindex="0" class="dot" onclick="current_slide(3)" onkeydown="if (event.key === 'Enter') current_slide(3)"></span> 
+          <span tabindex="0" class="dot" onclick="current_slide(4)" onkeydown="if (event.key === 'Enter') current_slide(4)"></span> 
+        </div>
+
+
+      </div>
+
+    <!-- Part 3: Activites -->
+      <div class = "section_three">
+       <div class = "slide_text_left">
+         <h2>Activities on Atlantis</h2>
+         <p>
+            On Atlantis, you can farm fresh crops, enjoy a cozy meal, relax with a picnic, 
+            or wander through the magical mushroom forest!
+         </p>
+       </div>
+
+       <div class="slideshow_container slideshow_right">
+
+        <div class="my_slides_2 fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Beau.JPG" alt="Farming fresh crops">
+        </div>
+
+        <div class="my_slides_2 fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Raymond.JPG" alt="Enjoying a cozy meal">
+        </div>
+
+        <div class="my_slides_2 fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Stitches.JPG" alt="Relaxing with a picnic">
+        </div>
+
+        <div class="my_slides_2 fade">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Apple.JPG" alt="Wandering through the magical mushroom forest">
+        </div>
+
+        <a tabindex="0" class="prev" onclick="plus_slides_2(-1)" onkeydown="if (event.key === 'Enter') plus_slides_2(-1)">❮</a>
+        <a tabindex="0" class="next" onclick="plus_slides_2(1)" onkeydown="if (event.key === 'Enter') plus_slides_2(1)">❯</a>
+
+       </div>
+
+        <br>
+
+        <div class = "dots_2">
+          <span tabindex="0" class="dot_2" onclick="current_slide_2(1)" onkeydown="if (event.key === 'Enter') current_slide_2(1)"></span> 
+          <span tabindex="0" class="dot_2" onclick="current_slide_2(2)" onkeydown="if (event.key === 'Enter') current_slide_2(2)"></span> 
+          <span tabindex="0" class="dot_2" onclick="current_slide_2(3)" onkeydown="if (event.key === 'Enter') current_slide_2(3)"></span> 
+          <span tabindex="0" class="dot_2" onclick="current_slide_2(4)" onkeydown="if (event.key === 'Enter') current_slide_2(4)"></span> 
+        </div>
+
+      </div>
+
+
+      <!-- Part 4: Map -->
+      <div class = "section_four  last_section">
+       <div class = "text_right">
+         <h2>A Dreamy Tour Awaits</h2>
+         <p>
+            Would you like to explore more of Atlantis? 
+            Feel free to visit using the dream address below and wander through all its little details on your own adventure.
+         </p>
+            <!-- <br> -->
+         <p>
+            My dream address: DA-3648-2592-6674
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_left">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Map.JPG" alt="Atlantis's map with the dream address"> 
+       </div>
+
+        <div class = "bottom_space"></div>
+
+      </div>
+
+    </main>
+    
+    <footer class = "footer_container">
+        <!-- <p class = "first_line">University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p class = "address"> 
+            School of Information 
+            <br>
+            University of Michigan
+            <br>
+            2200 Hayward Street
+            <br>
+            Ann Arbor, MI 48109
+            <br>
+        </p> -->
+        <p class = "copyright">© Copyrights <span id="year"></span> by Victor Fang. All rights reserved.</p>
+    </footer>
+
+    <script src = "js/index.js"></script>
+
+</body>
+</html>

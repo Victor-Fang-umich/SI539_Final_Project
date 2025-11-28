@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Resources</title>
+</head>
+
+<body>
+    <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
+    <header>
+        <!-- <div id="about_page_current"></div> -->
+        <!-- <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html" class = "active">Home</a></li>
+                <li><a href = "networking.html">Networking</a></li>
+                <li><a href = "resume.html">Resumes</a></li>
+                <li class><a href = "career.html">Career</a></li>
+                <li class = "last_option"><a href = "contact.html">Contact</a></li>
+            </ul>
+        </nav> -->
+
+    </header>
+
+    <!-- <main class="container" id = "main_content">  -->   <!-- main content starts at the header image: Line 72 -->
+    <main class="container">
+
+      <!-- Part 1: Header -->
+       <div class = "header">
+        
+        <!-- Mobile Navigation Menu -->
+        <div class = "mobile_nav" id = "padding_space">
+          <a href="javascript:void(0);" id="unclick_menu" onclick = "burgerMenu()">
+            <div class = "menu_icon_unclicked">
+              <img id="menu_icon" src="images/Menu_Icon.png" alt="A buger menu icon">
+            </div>
+          </a>
+
+          <a href="javascript:void(0);" id="click_menu" onclick="burgerMenu()">
+            <div class = "menu_icon_clicked">
+              <img id="close_icon" src="images/Close_Icon.png" alt="A close icon">
+            </div>
+          </a>
+          <div id="mobile_nav_links">
+            <div id="horizontal_line"></div>
+            <ul>
+                 <li><a href = "index.html">Home</a></li>
+                 <li><a href = "resources.html"><span class="current">-</span> Resources <span class="current">-</span></a></li>
+                 <li><a href = "news.html">News</a></li>
+                 <li class = "last_option"><a href = "about.html">About</a></li>
+             </ul>
+           </div>
+
+        </div>
+
+
+        <nav class = "nav_container">
+            <ul>
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "resources.html" class="active">Resources</a></li>
+                <li><a href = "news.html">News</a></li>
+                <li class = "last_option"><a href = "about.html">About</a></li>
+            </ul>
+            <div class = "nav_background">
+
+            </div>
+        </nav>
+
+       
+         <div class = "header_img" id = "main_content">   
+            <img width="560" height="315" src="images/Resources_Header.JPG" alt="The museum on Atlantis">
+         </div>
+
+         <div class = "backup_title">
+           <h1>Resources</h1>
+         </div>
+
+         <div class = "header_title title_size">
+            <img src="images/Resources_Title.png" alt="Resources Title">
+         </div>
+
+       </div>
+
+
+      <!-- Part 2: Introduction -->
+      <div class = "intro">
+       <div class = "text_left">
+         <h2>Need Inspirations?</h2>
+         <p>
+            Looking for more inspiration? 
+            Check out the following resources to discover 
+            creative design ideas, join relevant communities, and explore fantastic islands.
+         </p>
+       </div>
+
+       <div class = "relevant_img">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/Flower.JPG" alt="Decorating a flower shop">
+       </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div tabindex="0" class="close" role="button" aria-label="Close">&times;</div>
+          <img class="modal-content" id="img_1" src="images/Flower.JPG" alt="Decorating a flower shop">
+          <div id="caption"></div>
+        </div>
+
+      </div>
+
+
+      <!-- Part 3: Pinterest -->
+      <div class = "section_two">
+       <div class = "text_right">
+         <h2>Pinterest</h2>
+         <p>
+            On Pinterest, you can browse countless brilliant designs,
+            pick up creative ideas, and get inspired for your own 
+            island decorations.
+         </p>
+         <p>
+            <a class="link_style" href="https://www.pinterest.com/search/pins/?q=animal%20crossing%20island%20ideas&rs=ac&len=22&source_id=ac_zlXp9viT&eq=animal%20crossing%20island&etslf=3769">
+              Click to visit Pinterest</a>
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_left img_border">
+        <a tabindex="-1" href="https://www.pinterest.com/search/pins/?q=animal%20crossing%20island%20ideas&rs=ac&len=22&source_id=ac_zlXp9viT&eq=animal%20crossing%20island&etslf=3769">
+            <img width="560" height="315" src="images/Pinterest.jpg" alt="Pinterest Link"></a>
+       </div>
+    
+      </div>
+
+      <!-- Part 4: Reddit -->
+      <div class = "section_three">
+       <div class = "text_left">
+         <h2>Reddit</h2>
+         <p>
+            Reddit is a platform where you can join communities to connect with 
+            other Animal Crossing players, showcase your island, and 
+            receive advice from fellow players. 
+         </p>
+         <p>
+            <a class="link_style" href="https://www.reddit.com/search/?q=animal+crossing+community&type=communities&cId=4e9e3060-0408-46d1-a5e8-876859119277&iId=4aed8035-74e0-4bd0-8a5a-a0788ef2a3be">
+              Click to visit Reddit</a>
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_right img_border">
+        <a tabindex="-1" href="https://www.reddit.com/search/?q=animal+crossing+community&type=communities&cId=4e9e3060-0408-46d1-a5e8-876859119277&iId=4aed8035-74e0-4bd0-8a5a-a0788ef2a3be">
+            <img width="560" height="315" src="images/Reddit.jpg" alt="Reddit Link"></a>
+       </div>
+    
+      </div>
+
+      <!-- Part 5: Youtube -->
+      <div class = "section_four last_section">
+       <div class = "text_right">
+         <h2>YouTube</h2>
+         <p>
+            On YouTube, you can find numerous videos that showcase 
+            island tours and offer valuable insights and design inspiration.
+         </p>
+         <p>
+            <a class="link_style" href="https://www.youtube.com/results?search_query=animal+crossing+island+tour">
+              Click to visit YouTube</a>
+         </p>
+       </div>
+
+       <div class = "relevant_img slideshow_left img_border">
+        <a tabindex="-1" href="https://www.youtube.com/results?search_query=animal+crossing+island+tour">
+            <img width="560" height="315" src="images/Youtube.jpg" alt="Youtube Link"></a>
+       </div>
+
+       
+    
+       <div class = "bottom_space"></div>
+      </div>
+
+
+
+
+    </main>
+    
+    <footer class = "footer_container">
+        <!-- <p class = "first_line">University of Michigan School of Information <br> <a href="https://umich.instructure.com/courses/137916">UMSI Career Development Office </a></p>
+        <p class = "address"> 
+            School of Information 
+            <br>
+            University of Michigan
+            <br>
+            2200 Hayward Street
+            <br>
+            Ann Arbor, MI 48109
+            <br>
+        </p> -->
+        <p class = "copyright">© Copyrights <span id="year"></span> by Victor Fang. All rights reserved.</p>
+    </footer>
+
+    <script src = "js/index.js"></script>
+
+</body>
+</html>
