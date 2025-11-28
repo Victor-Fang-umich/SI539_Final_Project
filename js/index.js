@@ -5,6 +5,7 @@ window.addEventListener("load", function() {
 });
 
 
+
 // Slideshow - From W3School
 const home_check = document.getElementById("home_page_current");
 let slideIndex = 1;
@@ -81,6 +82,7 @@ function showSlides_2(n_2) {
 }
 
 
+
 // Burger Menu - From W3School
 function burgerMenu() {
   var x = document.getElementById("mobile_nav_links"); // Navition options (ex: Home, About, etc)
@@ -113,6 +115,8 @@ function burgerMenu() {
     console.log('Menu is now shown.')
   }
 }
+
+
 
 // Remove focus after clicking by mouse
 // Resource: https://stackoverflow.com/questions/79325687/remove-button-focus-state-after-click
@@ -188,57 +192,14 @@ menu_button.addEventListener('blur', function() { // Add event listener for blur
 
 
 
-
-// // Get the modal - Fron W3School
-// var modal = document.getElementById("myModal");
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.querySelectorAll(".myImages");
-// // var img = document.getElementById("myImg");
-// var modalImg = document.getElementById("img_1");
-// var captionText = document.getElementById("caption");
-
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// }
-// img.addEventListener('keydown', function(event) {
-//     // Check if the 'Enter' key was pressed
-//     if (event.key === 'Enter') {
-//       modal.style.display = "block";
-//       modalImg.src = this.src;
-//       captionText.innerHTML = this.alt;
-//       // Prevent the default action (if any)
-//       event.preventDefault(); 
-//     }
-// });
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks on <span> (x) using keyboard, close the modal
-// span.addEventListener('keydown', function(event) {
-//     // Check if the 'Enter' key was pressed
-//     if (event.key === 'Enter') {
-//       modal.style.display = "none";
-//       // Prevent the default action (if any)
-//       event.preventDefault(); 
-//     }
-// });
-
-
-
-
-
-
-
-// Get the modal, caption, and the image inside the modal once
+// Get the modal - Fron W3School
+  /* Resource
+    Author: Google
+    Date: 2025
+    Title of Code: How to use the same code to get the modal for different images
+    Type: AI-generated source code
+    Availability: https://gemini.google.com/ 
+  */
 var modal = document.getElementById("myModal");
 var modalImg = document.getElementById("img_1");    // does it have to be img_1 ??
 var captionText = document.getElementById("caption");
@@ -285,9 +246,58 @@ span.addEventListener('keydown', function(event) {
     }
 });
 
-// Optional: Close the modal if the user clicks outside of the image content
+// Close the modal if the user clicks outside of the image content
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+// // Get the modal - Fron W3School  ----------------->  This is hard coding, so it is NOT used.
+// var modal = document.getElementById("myModal");
+
+// // Get the image and insert it inside the modal - use its "alt" text as a caption
+// var img = document.querySelectorAll(".myImages");
+// // var img = document.getElementById("myImg");
+// var modalImg = document.getElementById("img_1");
+// var captionText = document.getElementById("caption");
+
+// img.onclick = function(){
+//   modal.style.display = "block";
+//   modalImg.src = this.src;
+//   captionText.innerHTML = this.alt;
+// }
+// img.addEventListener('keydown', function(event) {
+//     // Check if the 'Enter' key was pressed
+//     if (event.key === 'Enter') {
+//       modal.style.display = "block";
+//       modalImg.src = this.src;
+//       captionText.innerHTML = this.alt;
+//       // Prevent the default action (if any)
+//       event.preventDefault(); 
+//     }
+// });
+
+// // Get the <span> element that closes the modal
+// var span = document.getElementsByClassName("close")[0];
+
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() { 
+//   modal.style.display = "none";
+// }
+
+// // When the user clicks on <span> (x) using keyboard, close the modal
+// span.addEventListener('keydown', function(event) {
+//     // Check if the 'Enter' key was pressed
+//     if (event.key === 'Enter') {
+//       modal.style.display = "none";
+//       // Prevent the default action (if any)
+//       event.preventDefault(); 
+//     }
+// });

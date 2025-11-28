@@ -104,6 +104,8 @@ main a{
   align-items: center;
   justify-items: center;
   background-color: #4d2912;
+
+  position: relative;    /* This makes the burger menu stay on the right side. */
 }
 
 .header .header_img, .header_title, .nav_container, .backup_title, .mobile_nav{
@@ -224,7 +226,7 @@ nav a:hover {
   margin-right: 15px;
   margin-top: 15px;
 
-  /* position: absolute; */
+  position: absolute;   /* Need to add position: relative to .header so the burger menu stays on the right side. */
 
   z-index: 3; 
 
