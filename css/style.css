@@ -98,7 +98,7 @@ main a{
 
   margin-bottom: 80px;    /* This ensures that there is some space between the header and the body section */
 
-  max-height: 850px;     /* This ensures that the header image will NOT be too large */
+  max-height: 700px;     /* This ensures that the header image will NOT be too large */
 
   position: relative;    /* This makes the burger menu stay on the right side. */
 }
@@ -107,11 +107,6 @@ main a{
     while keeping the max height 750px.
   This ensures that the header image will not cover 
     the whole screen. */
-.header_img{
-  /* max-height: 500px; */
-  width: 100%;
-}
-
 .header img {
   object-fit: cover;
   width: 100%;
@@ -119,7 +114,15 @@ main a{
   /* max-height: 500px; */
   /* background-size: cover; */
 
-  max-height: 850px; /* This ensures that the header image will NOT be too large */
+  max-height: 700px; /* This ensures that the header image will NOT be too large */
+}
+
+.header_img{
+  /* max-height: 500px; */
+  width: 100%;
+  
+  z-index: 1; 
+  filter: brightness(50%);
 }
 
 .header_img, .header_title, .nav_container, .backup_title, .mobile_nav{
@@ -130,6 +133,7 @@ main a{
 .header_title{
   width: 80%;
   height: auto;
+  max-height: 60%;
 
   margin-top: 50px;
 
@@ -147,11 +151,6 @@ main a{
 .title_size{
   width: 100%;
 }
-
-.header_img{
-  z-index: 1; 
-  filter: brightness(50%);
-}  
 /* End - Header */
 
 /* Navigation Settings */
