@@ -96,7 +96,7 @@ main a{
   justify-items: center;
   background-color: #4d2912;
 
-  margin-bottom: 80px;    /* This ensures that there is some space between the header and the body section */
+  margin-bottom: 60px;    /* This ensures that there is some space between the header and the body section */
 
   max-height: 700px;     /* This ensures that the header image will NOT be too large */
 
@@ -328,7 +328,7 @@ nav a:hover {
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 60px;
+  grid-gap: 40px;
   align-items: center;
   justify-items: center;
   max-height: 100%;
@@ -455,7 +455,7 @@ body{
 }
 
 .bottom_space {    /* This ensures that there is some space between the last section and the footer */
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 /* End - All Sections */
 
@@ -760,6 +760,18 @@ input[type=submit]:focus{
 
 /* Responsive: change font size */
 @media all and (min-width: 500px) {
+
+.header{
+  margin-bottom: 80px;    /* This ensures that there is some space between the header and the body section */
+}
+
+.container {
+  grid-gap: 60px;
+}
+
+.bottom_space {    /* This ensures that there is some space between the last section and the footer */
+  margin-bottom: 60px;
+}
 
 .title_size{
   width: 85%;
