@@ -1,17 +1,19 @@
 /* Table of contents */
 /* 
   1. Skip Button - Line 40
-  2. Header - Line 100
-  3. Navigation Settings - Line 155
-  4. Mobile Burger Menu - Line 217
-  5. Introduction - Line 326
-  6. Section 2~4 - Line 342
-  7. All Sections - Line 356
-  8. Footer Section- Line 440
-  9. Slideshow Section - Line 485
-  10. Contact Form - Line 586
-  11. Modal/Pop-up Window for Image (Laptop Version) - Line 649
-  12. Pop-up Window for Images: Resize - Line 780, 879, and 903
+  2. Clickable Elements - Line 68
+  3. Header - Line 90
+  4. Navigation Settings - Line 159
+  5. Mobile Burger Menu - Line 221
+  6. Grid for Body Section - Line 330
+  7. Introduction - Line 348
+  8. Section 2~4 - Line 364
+  9. All Sections - Line 379
+  10. Footer Section- Line 467
+  11. Slideshow Section - Line 512
+  12. Contact Form - Line 595
+  13. Modal/Pop-up Window for Image (Laptop Version) - Line 658
+  14. Pop-up Window for Images: Resize - Line 788, 897, and 921
 */
 
 
@@ -63,6 +65,8 @@ html{
 }
 /* End - Skip Button */
 
+
+/* Clickable Elements */
 *:focus {
   box-sizing: border-box;
   border: 5px dashed #4d2912;
@@ -75,27 +79,14 @@ main a{
 
 .link_style{  
   color: #4d2912; 
-  /* text-decoration: none; */
   font-style: italic;
 }
 
 .link_style:visited{
   color: #4d2912; 
 }
+/* End - Clickable Elements */
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 60px;
-  align-items: center;
-  justify-items: center;
-  max-height: 100%;
-  max-width: 100%;
-}
-
-.header, .intro, .nav_container, .section_two, .section_three, .section_four {
-     grid-column: 1 / -1;
-}
 
 /* Header */
 .header {
@@ -105,10 +96,33 @@ main a{
   justify-items: center;
   background-color: #4d2912;
 
+  margin-bottom: 80px;    /* This ensures that there is some space between the header and the body section */
+
+  max-height: 850px;     /* This ensures that the header image will NOT be too large */
+
   position: relative;    /* This makes the burger menu stay on the right side. */
 }
 
-.header .header_img, .header_title, .nav_container, .backup_title, .mobile_nav{
+/* The next 2 sections help enlarge the header image
+    while keeping the max height 750px.
+  This ensures that the header image will not cover 
+    the whole screen. */
+.header_img{
+  /* max-height: 500px; */
+  width: 100%;
+}
+
+.header img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  /* max-height: 500px; */
+  /* background-size: cover; */
+
+  max-height: 850px; /* This ensures that the header image will NOT be too large */
+}
+
+.header_img, .header_title, .nav_container, .backup_title, .mobile_nav{
   grid-column: 1 / -1;
   grid-row: 1;
 }
@@ -138,21 +152,6 @@ main a{
   z-index: 1; 
   filter: brightness(50%);
 }  
-
-/* The next 2 sections help enlarge the header image
-    while keeping the max height 750px.
-  This ensures that the header image will not cover 
-    the whole screen. */
-.header_img{
-  max-height: 900px;
-  width: 100%;
-}
-
-.header img{
-  max-height: 900px;
-  background-size: contain;
-}
- 
 /* End - Header */
 
 /* Navigation Settings */
@@ -326,6 +325,23 @@ nav a:hover {
 /* End - Mobile Burger Menu */
 
 
+/* Grid for Body Section */
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 60px;
+  align-items: center;
+  justify-items: center;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.intro, .nav_container, .section_two, .section_three, .section_four {
+     grid-column: 1 / -1;
+}
+/* End - Grid for Body Section */
+
+
 /* Introduction */
 .intro{
   max-width: 1365px; /* make all the sections the same size */
@@ -362,8 +378,6 @@ nav a:hover {
   object-fit: cover;
   width: 100%;
   height: 100%;
-
-  max-height: 900px; /* This ensures that the header image will be too large */
 }
 
 .container iframe {
@@ -429,7 +443,7 @@ p {
 }
 
 body{
-  background-color: #fff9dd;
+  background-color: #f8f2d7;
   font-family: 'Fira Code', monospace, sans-serif;
   font-size: 16px;
   line-height: 1.15;
@@ -529,24 +543,6 @@ footer .copyright{
   color: #ffce4d;
   border: 5px dashed #ff9194;
   background-color: rgba(0,0,0, 1);
-}
-
-.text {    /* Caption text -> NOT USED */
-  /* color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center; */
-}
-
-.numbertext {      /* Number text (1/3 etc) -> NOT USED */
-  /* color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0; */
 }
 
 .dot, .dot_2 {     /* The dots/bullets/indicators */
@@ -807,6 +803,14 @@ body{
 
 /* Larger Version */
 @media all and (min-width: 1024px) {
+
+.header{
+  margin-bottom: 150px;    /* This ensures that there is some space between the header and the body section */
+}
+
+.bottom_space {    /* This ensures that there is some space between the last section and the footer */
+    margin-bottom: 80px;
+}
 
 .mobile_nav{
   display: none;
