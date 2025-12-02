@@ -629,7 +629,7 @@ input[type=submit] {
   background-color: #3C6506;
   color: white;
 
-  padding: 12px 20px;
+  padding: 12px 40px;
   border: none;
   border-radius: 4px;
 
@@ -757,6 +757,47 @@ input[type=submit]:focus{
 /* End - Modal/Pop-up Window for Image */
 
 
+/* Error Page */
+.error{
+ grid-column: 1 / -1;
+ text-align: center;
+}
+
+.error_title{
+  color: #4d2912;
+  padding-bottom: 0px;
+}
+
+.error > .button{
+  margin-top: 50px;
+}
+
+.button,.button:visited{  
+  color: white;
+  background-color: #3C6506;
+
+  padding: 15px 60px;
+  border-radius: 10px; 
+  
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.button:hover{  
+  color: #FFCB05;
+}
+
+.button:focus{  
+  color: #FFCB05;
+  border: 5px dashed #FFCB05;
+}
+
+.error_footer{       /* This makes the footer stay at the bottom of the page */
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+/* END - Error Page */
 
 
 
@@ -811,8 +852,9 @@ body{
   object-fit: fill;
 }
 
-
 }
+
+
 
 
 
@@ -933,6 +975,9 @@ h2{
 }
 
 }
+
+
+
 
 
 @media all and (min-width: 1500px) {
