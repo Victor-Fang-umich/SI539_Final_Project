@@ -396,6 +396,7 @@ nav a:hover {
 .img_border > a:hover{    /* This is used for resources page (Pinterest, ect) */
   border-radius: 15px;
   transition: 0.3s;
+  border: none;
   border: 5px solid #4d2912;
 }
 
@@ -404,8 +405,10 @@ nav a:hover {
   border: 5px dashed #4d2912;
 }
 
-.img_border{     /* This is used for resources page (Pinterest, ect) */
+.img_border > a{     /* This is used for resources page (Pinterest, ect) */
   display: grid;  
+  border-radius: 11px;
+  border: 1px solid rgb(209, 209, 209);
 }
 
 h1 {
@@ -443,6 +446,7 @@ p {
 
 body{
   background-color: #fffbf5;
+  /* background-color: #ff9194; */
   font-family: 'Fira Code', monospace, sans-serif;
   font-size: 16px;
   line-height: 1.15;
