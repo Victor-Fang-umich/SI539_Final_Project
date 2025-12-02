@@ -811,6 +811,10 @@ body{
     margin-bottom: 80px;
 }
 
+.header_title{
+  /* width: 60%; */
+}
+
 h2{
   font-size: 32px;
 }
@@ -920,6 +924,12 @@ h2{
 .intro, .section_two, .section_three, .section_four{
   grid-gap: 30px;
 }
+
+.header_title{
+  width: 50%;
+  /* max-height: px; */
+}
+
 
 /* Pop-up Window for Images: Resize */
 .modal-content{      /* Modal Content (Image) - Part 1 */
