@@ -412,6 +412,7 @@ a img:hover{
   display: grid;  
   border-radius: 11px;
   border: 1px solid rgb(209, 209, 209);
+  aspect-ratio: initial;
 }
 
 .img_border > a:hover{    /* This is used for resources page (Pinterest, ect) */
@@ -424,7 +425,7 @@ a img:hover{
 
 .img_border > a:focus{    /* This is used for resources page (Pinterest, ect) */
   border-radius: 11px;
-  border: 5px dashed #4d2912;
+  /* border: 5px dashed #4d2912; */
 }
 
 h1 {
