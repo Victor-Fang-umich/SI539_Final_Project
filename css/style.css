@@ -962,6 +962,10 @@ h2{
 }
 
 /* Pop-up Window for Images: Resize */
+.modal{         /* This changes the location of the modal */
+  padding-top: 20px; /* Location of the box */
+}
+
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 1024px;
