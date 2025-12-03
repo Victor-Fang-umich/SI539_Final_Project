@@ -390,26 +390,39 @@ nav a:hover {
 
 .container iframe:hover {
   transition: 0.3s;
-  box-sizing: border-box;
-  border: 5px solid #4d2912;
+  /* box-sizing: border-box; */
+  /* border: 5px solid #4d2912; */
+
+  transform: scale(1.03);
 }
 
-.img_border > a:hover{    /* This is used for resources page (Pinterest, ect) */
-  border-radius: 15px;
-  transition: 0.3s;
-  border: none;
-  border: 5px solid #4d2912;
+.relevant_img{         /* This is the container for images and videos */
+  border-radius: 10px;
+  overflow: hidden;    /* This makes images stay in container when hover/zoom in */
 }
 
-.img_border > a:focus{    /* This is used for resources page (Pinterest, ect) */
-  border-radius: 15px;
-  border: 5px dashed #4d2912;
+a img:hover{ 
+    transition: 0.3s;
+    transform: scale(1.03);  /* Zoom in when hover -> Need 'overflow: hidden' in its container */
 }
 
-.img_border > a{     /* This is used for resources page (Pinterest, ect) */
+.img_border{     /* This is used for resources page (Pinterest, ect) */
   display: grid;  
   border-radius: 11px;
   border: 1px solid rgb(209, 209, 209);
+}
+
+.img_border > a:hover{    /* This is used for resources page (Pinterest, ect) */
+  /* border-radius: 15px; */
+  transition: 0.3s;
+  /* border: none;
+  border: 5px solid #4d2912; */
+  overflow: hidden;
+}
+
+.img_border > a:focus{    /* This is used for resources page (Pinterest, ect) */
+  border-radius: 11px;
+  border: 5px dashed #4d2912;
 }
 
 h1 {
@@ -571,7 +584,7 @@ footer .copyright{
 }
 
 .dot:focus, .dot_2:focus {
-  box-sizing: content-box;
+  box-sizing: border-box;
   background-color: #4d2912;
   border: 4px dashed #ff9194;
 } 
@@ -613,8 +626,8 @@ input[type=text], input[type=email], textarea {
   background-color: #fde8d7;
   border: 1px solid #ccc;
   border-radius: 4px;
-  margin-top: 6px;
-  margin-bottom: 16px;
+  margin-top: 8px;
+  margin-bottom: 20px;
 
   box-sizing: border-box;
   resize: vertical;
@@ -657,6 +670,16 @@ input[type=submit]:focus{
 
 
 /* Modal/Pop-up Window for Image */
+.my_slides{
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.my_slides_2{
+  border-radius: 15px;
+  overflow: hidden;
+}
+
 .myImages{
   border-radius: 5px;
   cursor: pointer;
@@ -664,9 +687,9 @@ input[type=submit]:focus{
 }
 
 .myImages:hover{
-  /* opacity: 0.7; */
   box-sizing: border-box;
-  border: 5px solid #4d2912;
+  /* border: 5px solid #4d2912; */
+  transform: scale(1.03);
 }
 
 .modal{         /* The Modal (background) */
@@ -982,6 +1005,27 @@ h2{
   height: 560px;
 
   object-fit: fill;
+}
+/* End - Pop-up Window  */
+
+
+.form_container {
+  padding: 30px;
+}
+
+input[type=text], input[type=email], textarea {
+  font-size: 18px;
+
+  width: 100%;
+  padding: 12px;
+  background-color: #fde8d7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 8px;
+  margin-bottom: 30px;
+
+  box-sizing: border-box;
+  resize: vertical;
 }
 
 }
