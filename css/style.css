@@ -824,7 +824,7 @@ input[type=submit]:focus{
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 64px;
 }
 
 h2 {
@@ -873,6 +873,11 @@ body{
 .header_title{
   width: 70%;
 }
+
+h1 {
+  font-size: 90px;
+}
+
 
 h2{
   font-size: 32px;
@@ -993,6 +998,10 @@ h2{
 
 .header_title{
   width: 55%;
+}
+
+h1 {
+  font-size: 100px;
 }
 
 
