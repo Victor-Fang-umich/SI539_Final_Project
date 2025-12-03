@@ -963,7 +963,7 @@ h2{
 
 /* Pop-up Window for Images: Resize */
 .modal{         /* This changes the location of the modal */
-  padding-top: 20px; /* Location of the box */
+  padding-top: 30px; /* Location of the box */
 }
 
 .modal-content{      /* Modal Content (Image) - Part 1 */
