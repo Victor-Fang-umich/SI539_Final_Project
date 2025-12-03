@@ -79,11 +79,15 @@ main a{
 }
 
 .link_style{  
-  color: #4d2912; 
-  font-style: italic;
+  /* color: #4d2912;  */
+  color: #3C6506;
 }
 
 .link_style:visited{
+  color: #3C6506;
+}
+
+.link_style:hover{
   color: #4d2912; 
 }
 /* End - Clickable Elements */
@@ -187,7 +191,9 @@ nav{
 
 nav a:focus {
   color: #ffce4d;
+  border-radius: 5px;
   border: 3px dashed #ff9194;
+  /* border: 3px dashed #ffce4d; */
   padding: 10px;
 }
 
@@ -488,6 +494,7 @@ footer{
   padding-top: 60px;
   padding-bottom: 30px;
   text-align: center;
+  padding-left: 0px;
 }
 
 .footer_container {
@@ -507,13 +514,12 @@ footer p{
 
 footer .address{
   text-align: left;
-    line-height: 150%;
+  line-height: 150%;
 }
 
 footer .first_line{
   font-weight: bold;
   line-height: 150%;
-
 }
 
 footer .copyright{
@@ -521,7 +527,7 @@ footer .copyright{
   border-top: 1px solid darkgray;
   padding-top: 50px;
 
-  width: 95%;
+  width: 100%;          /* This covers all the columns */
 }
 /* END - Footer Section */
 
