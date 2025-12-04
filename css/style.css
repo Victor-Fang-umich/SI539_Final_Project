@@ -23,6 +23,22 @@ html{
   scroll-behavior: smooth;
 }
 
+html{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
+body{
+    width: 100%;
+    /* height: 100%; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 /* From Start Code */
 @media screen and (prefers-reduced-motion: reduce){
   html{
@@ -100,6 +116,7 @@ main a{
   align-items: center;
   justify-items: center;
   background-color: #4d2912;
+  width: 100%;
 
   margin-bottom: 60px;    /* This ensures that there is some space between the header and the body section */
 
@@ -494,7 +511,7 @@ footer{
   padding-top: 60px;
   padding-bottom: 30px;
   text-align: center;
-  padding-left: 0px;
+  /* padding-left: 0px; */
 }
 
 .footer_container {
@@ -504,7 +521,7 @@ footer{
     align-items: center;
     justify-items: center;
     max-height: 100%;
-    max-width: 100%;
+    max-width: 100%;  
 }
 
 footer p{
@@ -513,13 +530,13 @@ footer p{
 }
 
 footer .address{
-  text-align: left;
-  line-height: 150%;
+  /* text-align: left;
+  line-height: 150%; */
 }
 
 footer .first_line{
-  font-weight: bold;
-  line-height: 150%;
+  /* font-weight: bold;
+  line-height: 150%; */
 }
 
 footer .copyright{
