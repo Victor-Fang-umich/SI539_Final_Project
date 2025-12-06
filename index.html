@@ -12,7 +12,7 @@
 <body>
     <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
     <header class = "header">
-        <div id="home_page_current"></div>  <!-- This activates the slideshows  -->
+        <div id="activite_slideshow"></div>  <!-- This activates the slideshows  -->
 
         <!-- Mobile Navigation Menu -->
         <div class = "mobile_nav" id = "padding_space">
@@ -61,9 +61,9 @@
          </div>
 
          <!-- This makes the image cover all columns -->
-         <div class = "header_title opacity_zero">
+         <!-- <div class = "header_title opacity_zero">
             <img src="images/Title.png" alt="Animal Crossing Diary Title">
-         </div>
+         </div> -->
 
          <div class = "header_title home_title_size">
             <img src="images/Title.png" alt="Animal Crossing Diary Title">
@@ -74,6 +74,7 @@
 
     <!-- <main class="container" id = "main_content">  -->   <!-- main content starts at the header image: Line 55 -->
     <main class="container"> 
+
 
       <!-- Part 1: Introduction -->
       <div class = "intro">
@@ -95,7 +96,9 @@
         <!-- The Modal -->
         <div id="myModal" class="modal">
           <div class="close_position">
-            <div tabindex="0" class="close" role="button" aria-label="Close">&times;</div>
+            <!-- <div tabindex="0" class="close" id="close_js" role="button" aria-label="Close">&times;</div> -->
+            <button class="close_button" id="close_js" aria-label="Close" type="button">
+            </button>
           </div>
           <img class="modal-content" id="img_1" src="images/Welcome.JPG" alt="My house on Atlantis">
           <div id="caption"></div>
@@ -142,14 +145,14 @@
         <br class = "hide_in_laptop_version">
 
         <div class = "dots">
-          <span tabindex="0" class="dot" onclick="current_slide(1)" onkeydown="if (event.key === 'Enter') current_slide(1)"></span> 
-          <span tabindex="0" class="dot" onclick="current_slide(2)" onkeydown="if (event.key === 'Enter') current_slide(2)"></span> 
-          <span tabindex="0" class="dot" onclick="current_slide(3)" onkeydown="if (event.key === 'Enter') current_slide(3)"></span> 
-          <span tabindex="0" class="dot" onclick="current_slide(4)" onkeydown="if (event.key === 'Enter') current_slide(4)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide one" onclick="current_slide(1)" onkeydown="if (event.key === 'Enter') current_slide(1)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide two" onclick="current_slide(2)" onkeydown="if (event.key === 'Enter') current_slide(2)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide three" onclick="current_slide(3)" onkeydown="if (event.key === 'Enter') current_slide(3)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide four" onclick="current_slide(4)" onkeydown="if (event.key === 'Enter') current_slide(4)"></span> 
         </div>
 
-
       </div>
+
 
     <!-- Part 3: Activites -->
       <div class = "section_three">
@@ -179,18 +182,18 @@
         <img class="myImages" tabindex="0" width="560" height="315" src="images/Apple.JPG" alt="Wandering through the magical mushroom forest">
         </div>
 
-        <a tabindex="0" class="prev" onclick="plus_slides_2(-1)" onkeydown="if (event.key === 'Enter') plus_slides_2(-1)">❮</a>
-        <a tabindex="0" class="next" onclick="plus_slides_2(1)" onkeydown="if (event.key === 'Enter') plus_slides_2(1)">❯</a>
+        <a tabindex="0" class="prev" aria-label="previous" onclick="plus_slides_2(-1)" onkeydown="if (event.key === 'Enter') plus_slides_2(-1)">❮</a>
+        <a tabindex="0" class="next" aria-label="next" onclick="plus_slides_2(1)" onkeydown="if (event.key === 'Enter') plus_slides_2(1)">❯</a>
 
        </div>
 
         <br class = "hide_in_laptop_version">
 
         <div class = "dots_2">
-          <span tabindex="0" class="dot_2" onclick="current_slide_2(1)" onkeydown="if (event.key === 'Enter') current_slide_2(1)"></span> 
-          <span tabindex="0" class="dot_2" onclick="current_slide_2(2)" onkeydown="if (event.key === 'Enter') current_slide_2(2)"></span> 
-          <span tabindex="0" class="dot_2" onclick="current_slide_2(3)" onkeydown="if (event.key === 'Enter') current_slide_2(3)"></span> 
-          <span tabindex="0" class="dot_2" onclick="current_slide_2(4)" onkeydown="if (event.key === 'Enter') current_slide_2(4)"></span> 
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide one" onclick="current_slide_2(1)" onkeydown="if (event.key === 'Enter') current_slide_2(1)"></span> 
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide two" onclick="current_slide_2(2)" onkeydown="if (event.key === 'Enter') current_slide_2(2)"></span> 
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide three" onclick="current_slide_2(3)" onkeydown="if (event.key === 'Enter') current_slide_2(3)"></span> 
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide four" onclick="current_slide_2(4)" onkeydown="if (event.key === 'Enter') current_slide_2(4)"></span> 
         </div>
 
       </div>

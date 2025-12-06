@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
 
 
 // Slideshow - From W3School
-const home_check = document.getElementById("home_page_current");
+const activate_slideshow = document.getElementById("activite_slideshow");
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,7 +24,7 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("my_slides");
   let dots = document.getElementsByClassName("dot");
 
-  if (home_check){
+  if (activate_slideshow){
     if (n > slides.length) {slideIndex = 1}    
 
     if (n < 1) {slideIndex = slides.length}
@@ -61,7 +61,7 @@ function showSlides_2(n_2) {
   let slides_2 = document.getElementsByClassName("my_slides_2");
   let dots_2 = document.getElementsByClassName("dot_2");
 
-  if (home_check){
+  if (activate_slideshow){
     if (n_2 > slides_2.length) {slideIndex_2 = 1}    
 
     if (n_2 < 1) {slideIndex_2 = slides_2.length}
@@ -201,11 +201,16 @@ menu_button.addEventListener('blur', function() { // Add event listener for blur
     Availability: https://gemini.google.com/ 
   */
 var modal = document.getElementById("myModal");
-var modalImg = document.getElementById("img_1");    // does it have to be img_1 ??
+var modalImg = document.getElementById("img_1");
 var captionText = document.getElementById("caption");
 
 // Get all images that share the 'myImages' class
 var images = document.querySelectorAll(".myImages");
+
+// Get all the elements and make them focusable OR not focusable
+const focusableElements = document.querySelectorAll('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+// This makes sure the keyboard returns to the previous element after closing the modal
+let previouslyFocusedElement = null;
 
 // Loop through all images and attach the event listeners
 images.forEach(function(img) {
@@ -222,14 +227,30 @@ images.forEach(function(img) {
   // Handle keyboard event (Enter key) for accessibility
   img.addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
+      // This tracks the element that is focused before the modal is opened
+      previouslyFocusedElement = document.activeElement;
+
       openModal();
       event.preventDefault(); // Prevent default action
+
+      // This makes everything not focusable
+      focusableElements.forEach(element => {
+        element.setAttribute('tabindex', '-1');
+
+      });
+      
+      // This makes the clos icon focusable
+      const activeButtons = document.querySelectorAll('#close_js');
+      // Loop through the collection and set the attribute on each one
+      activeButtons.forEach(button => {
+          button.setAttribute('tabindex', '0');
+      });
     }
   });
 });
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close_button")[0];
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -240,7 +261,20 @@ span.onclick = function() {
 span.addEventListener('keydown', function(event) {
     // Check if the 'Enter' key was pressed
     if (event.key === 'Enter') {
+      
+      // This makes everything focusable again
+      focusableElements.forEach(element => {
+        element.setAttribute('tabindex', '0');
+      });
+
+      // This brings the keyboard to the element that was focused before the modal was opened
+      if (previouslyFocusedElement) {
+        previouslyFocusedElement.focus(); //
+        previouslyFocusedElement = null; // Clear the reference
+      }
+
       modal.style.display = "none";
+
       // Prevent the default action (if any)
       event.preventDefault(); 
     }
@@ -252,52 +286,3 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
-
-
-
-
-
-
-
-// // Get the modal - Fron W3School  ----------------->  This is hard coding, so it is NOT used.
-// var modal = document.getElementById("myModal");
-
-// // Get the image and insert it inside the modal - use its "alt" text as a caption
-// var img = document.querySelectorAll(".myImages");
-// // var img = document.getElementById("myImg");
-// var modalImg = document.getElementById("img_1");
-// var captionText = document.getElementById("caption");
-
-// img.onclick = function(){
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// }
-// img.addEventListener('keydown', function(event) {
-//     // Check if the 'Enter' key was pressed
-//     if (event.key === 'Enter') {
-//       modal.style.display = "block";
-//       modalImg.src = this.src;
-//       captionText.innerHTML = this.alt;
-//       // Prevent the default action (if any)
-//       event.preventDefault(); 
-//     }
-// });
-
-// // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
-
-// // When the user clicks on <span> (x), close the modal
-// span.onclick = function() { 
-//   modal.style.display = "none";
-// }
-
-// // When the user clicks on <span> (x) using keyboard, close the modal
-// span.addEventListener('keydown', function(event) {
-//     // Check if the 'Enter' key was pressed
-//     if (event.key === 'Enter') {
-//       modal.style.display = "none";
-//       // Prevent the default action (if any)
-//       event.preventDefault(); 
-//     }
-// });
