@@ -912,7 +912,7 @@ input[type=submit]:focus{
 }
 
 h1 {
-  font-size: 58px;
+  font-size: 54px;
 }
 
 h2 {
@@ -955,7 +955,11 @@ body{
 }
 
 .bottom_space {    /* This ensures that there is some space between the last section and the footer */
-    margin-bottom: 80px;
+  margin-bottom: 80px;
+}
+
+.extra_bottom_space{    /* This is used for news.html */
+  margin-bottom: 120px;
 }
 
 .header_title{
@@ -965,7 +969,6 @@ body{
 h1 {
   font-size: 90px;
 }
-
 
 h2{
   font-size: 32px;
@@ -1098,7 +1101,7 @@ input[type=text], input[type=email], textarea {
 
 
 
-
+/* Responsive: Adjust */
 @media all and (min-width: 1500px) {
 
 .intro, .section_two, .section_three, .section_four{
