@@ -1,19 +1,20 @@
 /* Table of contents */
 /* 
-  1. Skip Button - Line 40
-  2. Clickable Elements - Line 68
-  3. Header - Line 90
-  4. Navigation Settings - Line 159
-  5. Mobile Burger Menu - Line 221
-  6. Grid for Body Section - Line 330
-  7. Introduction - Line 348
-  8. Section 2~4 - Line 364
-  9. All Sections - Line 379
-  10. Footer Section- Line 467
-  11. Slideshow Section - Line 512
-  12. Contact Form - Line 595
-  13. Modal/Pop-up Window for Image (Laptop Version) - Line 658
-  14. Pop-up Window for Images: Resize - Line 788, 897, and 921
+  1. Skip Button
+  2. Clickable Elements
+  3. Header 
+  4. Navigation Settings 
+  5. Mobile Burger Menu 
+  6. Grid for Body Section
+  7. Introduction 
+  8. Section 2~4 
+  9. All Sections 
+  10. Footer Section
+  11. Slideshow Section 
+  12. Contact Form 
+  13. Modal/Pop-up Window for Image (Laptop Version) 
+  14. Error Page
+  15. Pop-up Window for Images: Resize 
 */
 
 
@@ -28,7 +29,7 @@ html{
     height: 100%;
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;     /* This removes the extra space on the right side of the website */
 }
 
 body{
@@ -36,7 +37,7 @@ body{
     /* height: 100%; */
     margin: 0px;
     padding: 0px;
-    overflow-x: hidden; 
+    overflow-x: hidden;     /* This removes the extra space on the right side of the website */
 }
 
 /* From Start Code */
@@ -55,7 +56,7 @@ body{
   }
 }
 
-/* Skip Button */
+/* 1. Skip Button */
 .skip a{
   font-weight: bold;
   position: absolute;
@@ -83,7 +84,7 @@ body{
 /* End - Skip Button */
 
 
-/* Clickable Elements */
+/* 2. Clickable Elements */
 *:focus {
   box-sizing: border-box;
   border: 5px dashed #4d2912;
@@ -95,7 +96,6 @@ main a{
 }
 
 .link_style{  
-  /* color: #4d2912;  */
   color: #3C6506;
 }
 
@@ -109,7 +109,7 @@ main a{
 /* End - Clickable Elements */
 
 
-/* Header */
+/* 3. Header */
 .header {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -125,7 +125,7 @@ main a{
   position: relative;    /* This makes the burger menu stay on the right side. */
 }
 
-/* The next 2 sections help enlarge the header image
+/* The next 2 parts help enlarge the header image
     while keeping the max height 750px.
   This ensures that the header image will not cover 
     the whole screen. */
@@ -175,7 +175,7 @@ main a{
 }
 /* End - Header */
 
-/* Navigation Settings */
+/* 4. Navigation Settings */
 nav li{
   display: inline-block;
   padding-right: 20px;
@@ -230,7 +230,6 @@ nav a:hover {
   border-radius: 50px;
 
   margin-top: 20px;
-  /* margin-right: 20px; */
 
   padding: 15px 50px;
 
@@ -239,7 +238,7 @@ nav a:hover {
 /* End - Navigation Settings */
 
 
-/* Mobile Burger Menu */
+/* 5. Mobile Burger Menu */
 .mobile_nav{
   width: 75px;
   height: auto;
@@ -288,7 +287,7 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-#horizontal_line {     /* Line between the close icon and the snavigation options */
+#horizontal_line {     /* Line between the close icon and the navigation options */
   width: 180px; /* a specific width */
   height: 2px; /* Thickness of the line */
   background-color: rgb(92, 92, 92); /* Color of the line */
@@ -348,7 +347,7 @@ nav a:hover {
 /* End - Mobile Burger Menu */
 
 
-/* Grid for Body Section */
+/* 6. Grid for Body Section */
 .container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -360,12 +359,12 @@ nav a:hover {
 }
 
 .intro, .nav_container, .section_two, .section_three, .section_four {
-     grid-column: 1 / -1;
+  grid-column: 1 / -1;
 }
 /* End - Grid for Body Section */
 
 
-/* Introduction */
+/* 7. Introduction */
 .intro{
   max-width: 1365px; /* make all the sections the same size */
 
@@ -381,7 +380,7 @@ nav a:hover {
 /* End - Introduction */
 
 
-/* Section 2~4 */
+/* 8. Section 2~4 */
 .section_two img, .section_three img, .section_four img{
     border-radius: 10px;
 }
@@ -396,7 +395,7 @@ nav a:hover {
 /* End - Section 2-4 */
 
 
-/* All Sections */
+/* 9. All Sections */
 .container img {
   object-fit: cover;
   width: 100%;
@@ -499,12 +498,12 @@ body{
 }
 
 .bottom_space {    /* This ensures that there is some space between the last section and the footer */
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 /* End - All Sections */
 
 
-/* Footer Section */
+/* 10. Footer Section */
 footer{
   background-color: #fffbf5;
   /* color: black; */
@@ -515,13 +514,13 @@ footer{
 }
 
 .footer_container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 20px;
-    align-items: center;
-    justify-items: center;
-    max-height: 100%;
-    max-width: 100%;  
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+  max-height: 100%;
+  max-width: 100%;  
 }
 
 footer p{
@@ -549,7 +548,7 @@ footer .copyright{
 /* END - Footer Section */
 
 
-/* Slideshow Section */
+/* 11. Slideshow Section */
 .slideshow_container {
   position: relative;
   margin: auto;
@@ -632,7 +631,7 @@ footer .copyright{
 /* End - Slideshow */
 
 
-/* Contact Form */
+/* 12. Contact Form */
 .form_container {
   font-size: 18px;   /* The body font size */
 
@@ -695,7 +694,7 @@ input[type=submit]:focus{
 
 
 
-/* Modal/Pop-up Window for Image */
+/* 13. Modal/Pop-up Window for Image */
 .my_slides{
   border-radius: 15px;
   overflow: hidden;
@@ -847,7 +846,7 @@ input[type=submit]:focus{
 /* End - Modal/Pop-up Window for Image */
 
 
-/* Error Page */
+/* 14. Error Page */
 .error{
  grid-column: 1 / -1;
  text-align: center;
@@ -928,7 +927,7 @@ body{
   font-size: 16px;
 }
 
-/* Pop-up Window for Images: Resize */
+/* 15. Pop-up Window for Images: Resize (Part 1) */
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 640px;
@@ -939,7 +938,7 @@ body{
   width: 640px;    /* 1280 X 0.5 */
   height: 360px;   /* 560 X 0.5 */
 
-  object-fit: fill;
+  /* object-fit: fill; */
 }
 
 }
@@ -948,7 +947,7 @@ body{
 
 
 
-/* Larger Version */
+/* Laptop Version */
 @media all and (min-width: 1024px) {
 
 .header{
@@ -1058,7 +1057,7 @@ h2{
   border-top: 1.5px solid darkgray;
 }
 
-/* Pop-up Window for Images: Resize */
+/* 15. Pop-up Window for Images: Resize (Part 2)  */
 .modal{         /* This changes the location of the modal */
   padding-top: 30px; /* Location of the box */
 }
@@ -1073,7 +1072,7 @@ h2{
   width: 1024px;
   height: 560px;
 
-  object-fit: fill;
+  /* object-fit: fill; */
 }
 /* End - Pop-up Window  */
 
@@ -1118,7 +1117,7 @@ h1 {
 }
 
 
-/* Pop-up Window for Images: Resize */
+/* 15. Pop-up Window for Images: Resize (Part 3)  */
 .modal-content{      /* Modal Content (Image) - Part 1 */
   /* Image Size: 1280 X 720 */
   max-width: 1280px;
@@ -1129,7 +1128,7 @@ h1 {
   width: 1280px;
   height: 720px;
 
-  object-fit: fill;
+  /* object-fit: fill; */
 }
 
 }
