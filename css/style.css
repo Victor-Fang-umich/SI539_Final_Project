@@ -816,6 +816,7 @@ input[type=submit]:focus{
 
   box-sizing: content-box;
   padding: 15px;
+  border-radius: 5px;
 }
 
 .close_button::before, .close_button::after {   /* Create the two lines that form the 'X' */
