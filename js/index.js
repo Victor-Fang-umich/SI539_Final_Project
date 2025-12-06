@@ -7,7 +7,8 @@ window.addEventListener("load", function() {
 
 
 // Slideshow - From W3School
-const activate_slideshow = document.getElementById("activite_slideshow");
+const activate_slideshow = document.getElementById("activite_slideshow"); // This is for index.html
+const activate_slideshow_news = document.getElementById("activite_slideshow_news"); // This is for news.html
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -24,7 +25,7 @@ function showSlides(n) {
   let slides = document.getElementsByClassName("my_slides");
   let dots = document.getElementsByClassName("dot");
 
-  if (activate_slideshow){
+  if (activate_slideshow || activate_slideshow_news){
     if (n > slides.length) {slideIndex = 1}    
 
     if (n < 1) {slideIndex = slides.length}
@@ -61,7 +62,7 @@ function showSlides_2(n_2) {
   let slides_2 = document.getElementsByClassName("my_slides_2");
   let dots_2 = document.getElementsByClassName("dot_2");
 
-  if (activate_slideshow){
+  if (activate_slideshow || activate_slideshow_news){
     if (n_2 > slides_2.length) {slideIndex_2 = 1}    
 
     if (n_2 < 1) {slideIndex_2 = slides_2.length}

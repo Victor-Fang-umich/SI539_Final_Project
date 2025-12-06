@@ -12,6 +12,7 @@
 <body>
     <div class="skip"><a href="#main_content">Skip to Main Content</a></div>
     <header class = "header">
+        <div id="activite_slideshow_news"></div>  
 
         <!-- Mobile Navigation Menu -->
         <div class = "mobile_nav" id = "padding_space">
@@ -105,15 +106,15 @@
             The upcoming Version 3.0 update for <span class="italicize_style">Animal Crossing: New Horizons</span> will introduce four new villagers to the game. 
          </p>
          <p>
-            Mineru and Tulin are inspired by <span class="italicize_style">The Legend of Zelda</span>, 
-            while Cece and Viché are collaborations with <span class="italicize_style">Splatoon</span>.
+            Cece and Viché are collaborations with <span class="italicize_style">Splatoon</span>,
+            while Mineru and Tulin are inspired by <span class="italicize_style">The Legend of Zelda</span>. 
          </p>
        </div>
 
-       <div class = "relevant_img slideshow_left">
+       <!-- <div class = "relevant_img slideshow_left">
         <img class="myImages" tabindex="0" width="560" height="315" src="images/New_Villagers.png" alt="Cece and Viché">
-       </div>
-        <!-- The Modal -->
+       </div> -->
+        <!-- The Modal ??????????????????-->
         <div id="myModal" class="modal">
           <div class="close_position">
             <button class="close close_button" id="close_js" aria-label="Close" type="button"></button>
@@ -121,7 +122,44 @@
           <img class="modal-content" id="img_1" src="images/New_Villagers.png" alt="Cece and Viché">
           <div id="caption"></div>
         </div>
-    
+
+        <div class="slideshow_container slideshow_left">
+
+          <div class="my_slides fade">
+             <img class="myImages" tabindex="0" width="560" height="315" src="images/Cece_Viche.png" alt="Cece and Viché">
+          </div>
+
+          <!-- The Modal ????????-->
+          <!-- <div id="myModal" class="modal">
+            <div class="close_position">
+              <button class="close close_button" id="close_js" aria-label="Close" type="button"></button>
+            </div>
+            <img class="modal-content" id="img_1" src="images/Cece_Viche.png" alt="Cece and Viché">
+            <div id="caption"></div>
+          </div> -->
+
+          <div class="my_slides fade">
+          <img class="myImages" tabindex="0" width="560" height="315" src="images/Mineru.png" alt="Mineru">
+          </div>
+
+          <div class="my_slides fade">
+          <img class="myImages" tabindex="0" width="560" height="315" src="images/Tulin.png" alt="Tulin">
+          </div>
+
+          <a tabindex="0" class="prev" role="button" aria-label="previous" onclick="plus_slides(-1)" onkeydown="if (event.key === 'Enter') plus_slides(-1)">❮</a>
+          <a tabindex="0" class="next" role="button" aria-label="next" onclick="plus_slides(1)" onkeydown="if (event.key === 'Enter') plus_slides(1)">❯</a>
+
+        </div>
+
+        <br class = "hide_in_laptop_version">
+
+        <div class = "dots">
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide one" onclick="current_slide(1)" onkeydown="if (event.key === 'Enter') current_slide(1)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide two" onclick="current_slide(2)" onkeydown="if (event.key === 'Enter') current_slide(2)"></span> 
+          <span tabindex="0" class="dot" role="button" aria-label="Go to slide three" onclick="current_slide(3)" onkeydown="if (event.key === 'Enter') current_slide(3)"></span> 
+        </div>
+      
+
       </div>
 
 
@@ -135,9 +173,45 @@
          </p>
        </div>
 
-       <div class = "relevant_img slideshow_right">
-        <img class="myImages" tabindex="0" width="560" height="315" src="images/New_Items.png" alt="LEGO Items">
-       </div>
+       <!-- <div class = "relevant_img slideshow_right">
+        <img class="myImages" tabindex="0" width="560" height="315" src="images/LEGO_Items.png" alt="LEGO Items">
+       </div> -->
+
+
+        <div class="slideshow_container slideshow_right">
+
+          <div class="my_slides_2 fade">
+             <img class="myImages" tabindex="0" width="560" height="315" src="images/LEGO_Items.png" alt="LEGO items">
+          </div>
+
+          <!-- The Modal ????????-->
+          <!-- <div id="myModal" class="modal">
+            <div class="close_position">
+              <button class="close close_button" id="close_js" aria-label="Close" type="button"></button>
+            </div>
+            <img class="modal-content" id="img_1" src="images/LEGO_Items.png" alt="LEGO items">
+            <div id="caption"></div>
+          </div> -->
+
+          <div class="my_slides_2 fade">
+          <img class="myImages" tabindex="0" width="560" height="315" src="images/Hotel_Outfits.png" alt="Hotel outfits">
+          </div>
+
+          <a tabindex="0" class="prev" role="button" aria-label="previous" onclick="plus_slides_2(-1)" onkeydown="if (event.key === 'Enter') plus_slides_2(-1)">❮</a>
+          <a tabindex="0" class="next" role="button" aria-label="next" onclick="plus_slides_2(1)" onkeydown="if (event.key === 'Enter') plus_slides_2(1)">❯</a>
+
+        </div>
+
+        <br class = "hide_in_laptop_version">
+
+        <div class = "dots_2">
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide one" onclick="current_slide_2(1)" onkeydown="if (event.key === 'Enter') current_slide_2(1)"></span> 
+          <span tabindex="0" class="dot_2" role="button" aria-label="Go to slide two" onclick="current_slide_2(2)" onkeydown="if (event.key === 'Enter') current_slide_2(2)"></span> 
+        </div>
+
+
+
+
     
        <div class = "bottom_space"></div>
 
