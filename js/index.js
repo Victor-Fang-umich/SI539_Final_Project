@@ -193,7 +193,7 @@ menu_button.addEventListener('blur', function() { // Add event listener for blur
 
 
 
-// Get the modal - Fron W3School
+// Get the modal - Originally fron W3School
   /* Resource
     Author: Google
     Date: 2025
