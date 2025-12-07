@@ -1053,7 +1053,8 @@ h2{
 }
 
 .section_line{     /* This is for the line above the form in about.html */
-  padding-top: 110px;
+  padding-top: 115px;
+
   border-top: 1.5px solid darkgray;
 }
 
