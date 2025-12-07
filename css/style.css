@@ -684,11 +684,18 @@ input[type=submit]:hover {
 
 input[type=submit]:focus{
   border: 5px dashed #FFCB05;
-  color: #FFCB05;
+  color: #FFCB05; 
 }
 
 .text-center{
   text-align: center;
+}
+
+.req{  /* Required symbol - asterisk */
+  color: #9E1800;
+  position: relative;
+  left: 5px;
+  bottom: 5px;
 }
 /* End - Contact Form */
 
