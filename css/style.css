@@ -42,6 +42,12 @@ body{
 
 /* From Start Code */
 @media screen and (prefers-reduced-motion: reduce){
+  *{
+    /* transition-duration: none !important;  */
+    transition-duration: 0.01ms !important;   /* This removes animation for the images and the skip button */
+    -webkit-animation-duration: 0.01ms !important;   /* This removes animation for the pop-up window  */
+    animation-duration: 0.01ms !important;           /* This removes animation for the pop-up window  */
+  }
   html{
     scroll-behavior: auto; /* Removes scroll animation */
   }
