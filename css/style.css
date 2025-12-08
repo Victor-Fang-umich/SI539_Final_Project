@@ -233,6 +233,7 @@ nav a:hover {
   justify-self: center;
 
   background: rgba(18, 18, 18, 0.4);
+  backdrop-filter: blur(5px);
   border-radius: 50px;
 
   margin-top: 20px;
@@ -261,6 +262,7 @@ nav a:hover {
   display: grid;
   overflow: hidden;
   background-color: rgba(18, 18, 18, 0.5);
+  backdrop-filter: blur(5px);
   border-radius: 15px;
 
   justify-content: center;
